@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NavigationLab</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to">Ir a</string>
+    <string name="go1b">Ir a 1B</string>
+    <string name="mod1_a">Módulo 1 A</string>
+    <string name="mod1_b">Módulo 1 B</string>
+    <string name="mod2_a">Módulo 2 A</string>
+    <string name="mod2_b">Módulo 2 B</string>
+</resources>

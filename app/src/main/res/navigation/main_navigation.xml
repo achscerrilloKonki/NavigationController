@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_navigation"
+            app:startDestination="@id/fragmentMod1_A">
+
+    <fragment
+            android:id="@+id/fragmentMod1_A"
+            android:name="com.konkidevs.navigationlab.FragmentMod1_A"
+            android:label="FragmentMod1_A"
+            tools:layout="@layout/fragment_fragment_mod1_a">
+
+        <action
+                android:id="@+id/action_fragmentMod1_A_to_fragmentMod1_B2"
+                app:destination="@id/fragmentMod1_B"
+                app:popUpToInclusive="false" app:enterAnim="@animator/slide_in_left"
+                app:exitAnim="@animator/slide_out_right" app:popEnterAnim="@animator/slide_up"
+                app:popExitAnim="@animator/slide_down"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentMod1_B"
+              android:name="com.konkidevs.navigationlab.FragmentMod1_B"
+              android:label="fragment_fragment_mod1__b"
+              tools:layout="@layout/fragment_fragment_mod1__b">
+
+        <action
+                android:id="@+id/action_fragmentMod1_B_to_fragmentMod2_A"
+                app:destination="@id/fragmentMod2_A"
+                app:popUpToInclusive="false"/>
+        <argument android:name="valor1B" app:argType="string"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentMod2_A"
+              android:name="com.konkidevs.navigationlab.FragmentMod2_A"
+              android:label="fragment_fragment_mod2_a"
+              tools:layout="@layout/fragment_fragment_mod2_a">
+
+        <action
+                android:id="@+id/action_fragmentMod2_A_to_fragmentMod2_B"
+                app:destination="@id/fragmentMod2_B"
+                app:popUpToInclusive="false"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/fragmentMod2_B"
+              android:name="com.konkidevs.navigationlab.FragmentMod2_B"
+              android:label="fragment_fragment_mod2_b"
+              tools:layout="@layout/fragment_fragment_mod2_b"/>
+
+</navigation>
