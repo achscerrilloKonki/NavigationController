@@ -24,8 +24,11 @@ class FragmentMod1_B : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         buttonGo1B.setOnClickListener{
-            findNavController().navigate(R.id.action_fragmentMod1_B_to_fragmentMod2_A)
+            val bundle = Bundle()
+            bundle.putString("hello", "hola")
+            findNavController().navigate(R.id.action_fragmentMod1_B_to_fragmentMod2_A2, bundle)
         }
 
         arguments?.let {

@@ -24,29 +24,15 @@
               android:label="fragment_fragment_mod1__b"
               tools:layout="@layout/fragment_fragment_mod1__b">
 
-        <action
+        <!--action
                 android:id="@+id/action_fragmentMod1_B_to_fragmentMod2_A"
                 app:destination="@id/fragmentMod2_A"
-                app:popUpToInclusive="false"/>
+                app:popUpToInclusive="false"/-->
         <argument android:name="valor1B" app:argType="string"/>
+        <action android:id="@+id/action_fragmentMod1_B_to_fragmentMod2_A2" app:destination="@id/navigation"/>
 
     </fragment>
 
-    <fragment android:id="@+id/fragmentMod2_A"
-              android:name="com.konkidevs.navigationlab.FragmentMod2_A"
-              android:label="fragment_fragment_mod2_a"
-              tools:layout="@layout/fragment_fragment_mod2_a">
-
-        <action
-                android:id="@+id/action_fragmentMod2_A_to_fragmentMod2_B"
-                app:destination="@id/fragmentMod2_B"
-                app:popUpToInclusive="false"/>
-
-    </fragment>
-
-    <fragment android:id="@+id/fragmentMod2_B"
-              android:name="com.konkidevs.navigationlab.FragmentMod2_B"
-              android:label="fragment_fragment_mod2_b"
-              tools:layout="@layout/fragment_fragment_mod2_b"/>
+    <include app:graph="@navigation/module_2_navigation"></include>
 
 </navigation>

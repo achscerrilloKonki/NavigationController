@@ -12,6 +12,8 @@ import kotlinx.android.synthetic.main.fragment_fragment_mod2_a.*
 
 class FragmentMod2_A : Fragment() {
 
+    private var safeArgs: FragmentMod2_AArgs? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,7 +22,18 @@ class FragmentMod2_A : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        buttonGo2A.setOnClickListener { findNavController().navigate(R.id.action_fragmentMod2_A_to_fragmentMod2_B) }
+
+        buttonGo2A.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentMod2_A_to_fragmentMod2_B)
+        }
+
+        arguments?.let {
+            safeArgs = FragmentMod2_AArgs.fromBundle(it)
+        }
+
+
+        fragmentMod2_AName.text = safeArgs?.hello
+
     }
 
 }

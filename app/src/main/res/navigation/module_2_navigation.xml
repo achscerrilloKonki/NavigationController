@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/navigation"
+            app:startDestination="@id/fragmentMod2_A"
+            android:label="mod_2_graph"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools">
+    <fragment android:id="@+id/fragmentMod2_A"
+              android:name="com.konkidevs.navigationlab.FragmentMod2_A"
+              android:label="fragment_fragment_mod2_a"
+              tools:layout="@layout/fragment_fragment_mod2_a">
+
+        <action
+                android:id="@+id/action_fragmentMod2_A_to_fragmentMod2_B"
+                app:destination="@id/fragmentMod2_B"
+                app:popUpToInclusive="false"/>
+        <argument android:name="hello" app:argType="string"/>
+
+    </fragment>
+    <fragment android:id="@+id/fragmentMod2_B"
+              android:name="com.konkidevs.navigationlab.FragmentMod2_B"
+              android:label="fragment_fragment_mod2_b"
+              tools:layout="@layout/fragment_fragment_mod2_b">
+    </fragment>
+</navigation>
